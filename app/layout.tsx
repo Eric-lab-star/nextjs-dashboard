@@ -1,3 +1,8 @@
+import "@/app/ui/global.css";
+import {inter} from "@/app/ui/fonts";
+
+// Root layout is required
+// this layout will be shared across all pages
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
